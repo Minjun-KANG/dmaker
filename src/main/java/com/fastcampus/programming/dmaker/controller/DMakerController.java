@@ -32,7 +32,7 @@ public class DMakerController {
     }
 
     @PostMapping("/create-developer")
-    public List<String> createDevelopers(
+    public CreatedDeveloper.Response createDevelopers(
         @Valid @RequestBody CreatedDeveloper.Request request){
         //valid가 있어야 앞에 Nonnull 등 조건이 불만족하면 엑셉션을 띄운다.
 
@@ -40,7 +40,7 @@ public class DMakerController {
 
         dMakerService.createDeveloper(request);
 
-        return Collections.singletonList("Olaf");
+        return dMakerService.createDeveloper(request);
     }
 
 }
