@@ -35,6 +35,7 @@ public class DMakerService {
                     .developerLevel(request.getDeveloperLevel())
                     .developerSkillType(request.getDeveloperSkillType())
                     .experienceYears(request.getExperienceYears())
+                    .memberId(request.getMemberId())
                     .name(request.getName())
                     .age(request.getAge())
                     .build();
