@@ -30,7 +30,7 @@ public class DMakerController {
         return dMakerService.getAllDevelopers();
     }
 
-    @GetMapping("/developers/{memberId}")
+    @GetMapping("/developer/{memberId}")
     public DeveloperDetailDto getDeveloperDetail(
             @PathVariable String memberId
     ) {
