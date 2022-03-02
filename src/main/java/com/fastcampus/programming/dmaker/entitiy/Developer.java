@@ -1,6 +1,7 @@
 package com.fastcampus.programming.dmaker.entitiy;
 
 
+import com.fastcampus.programming.dmaker.code.StatusCode;
 import com.fastcampus.programming.dmaker.type.DeveloperLevel;
 import com.fastcampus.programming.dmaker.type.DeveloperSkillType;
 import lombok.*;
@@ -34,6 +35,9 @@ public class Developer {
     private String memberId;
     private String name;
     private Integer age;
+
+    @Enumerated(EnumType.STRING)
+    private StatusCode statusCode;
 
     @CreatedDate
     private LocalDateTime createdAt;
