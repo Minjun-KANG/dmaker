@@ -131,6 +131,7 @@ public class DMakerService {
         Developer developer = developerRepository.findByMemberId(memberId)
                 .orElseThrow(() -> new DMakerException(NO_DEVELOPER));
         developer.setStatusCode(StatusCode.RETIRED);
+        developerRepository.save(developer);
 
         if(developer != null) throw  new DMakerException(NO_DEVELOPER);
 
