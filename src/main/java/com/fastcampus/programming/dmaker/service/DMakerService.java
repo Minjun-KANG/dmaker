@@ -64,7 +64,7 @@ public class DMakerService {
                 .ifPresent((developer -> {
                     throw new DMakerException(DUPLICATED_MEMBER_ID);
                 }));
-
+        throw new ArrayIndexOutOfBoundsException();
     }
 
     public List<DeveloperDto> getAllEmployedDevelopers() {
@@ -133,7 +133,7 @@ public class DMakerService {
         developer.setStatusCode(StatusCode.RETIRED);
         developerRepository.save(developer);
 
-        if(developer != null) throw  new DMakerException(NO_DEVELOPER);
+        //if(developer != null) throw  new DMakerException(NO_DEVELOPER);
 
 
         // 2. save into RetiredDeveloper
