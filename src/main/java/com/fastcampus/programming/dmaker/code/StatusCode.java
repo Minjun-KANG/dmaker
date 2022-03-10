@@ -7,7 +7,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum StatusCode {
     EMPLOYED("고용"),
-    RETIRED("퇴직");
+    RETIRED("퇴직"),
+    LEAVE("휴직");
 
     private final String description;
 }
