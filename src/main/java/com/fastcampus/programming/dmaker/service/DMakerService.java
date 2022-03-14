@@ -24,7 +24,6 @@ import static com.fastcampus.programming.dmaker.exception.DMakerErrorCode.*;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class DMakerService {
     private final DeveloperRepository developerRepository;
     private final RetiredDeveloperRepository retiredDeveloperRepository;
